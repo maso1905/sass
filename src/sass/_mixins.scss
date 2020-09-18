@@ -1,0 +1,86 @@
+/* MIXIN */
+
+$bannerHeading: 46px;
+$bannerSubheading: 36px;
+
+// Heading lines extends
+.linesHeading{
+    text-align: center;
+    margin-top: 3.5%;
+    margin-bottom: 3.5%;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.linesBeforeandAfter{
+    content: '';
+    border-top: 2px solid;
+    margin: 0 20px 0 0;
+    flex: 1 0 20px;
+}
+.linesAfter{
+    margin: 0 0 0 20px;
+}
+
+// Auto grid
+@mixin grid($cols, $mgn){
+    float: left;
+    margin-right: $mgn;
+    margin-bottom: $mgn;
+    width: ((100% - (($cols - 1) * $mgn)) / $cols);
+    &:nth-child(#{$cols}n){
+        margin-right: 0;
+    }
+}
+
+// Auto banner
+@mixin banner{
+    position: relative;
+    .banner-content{
+        position: absolute;
+        width: 100%;
+        top: 50%;
+    }
+    img{
+        width: 100%;
+        height: 600px;
+        object-fit: cover;
+        opacity: 0.85;
+        @extend .box;
+    }
+    span{
+        display: block;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: rgb(83, 83, 83);
+        font-size: $bannerHeading;
+        margin-left: 5%;
+    }
+    span.sub-title{
+        font-weight: normal;
+        font-size: $bannerSubheading;
+    }
+}
+
+@mixin clearFix{
+    &:after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+// Header lines decoration
+@mixin lines{
+    h2{
+        @extend .linesHeading;
+    }
+    h2:before,
+    h2:after{
+        @extend .linesBeforeandAfter;
+    }
+    h2:after{
+        @extend .linesAfter;
+    }
+}

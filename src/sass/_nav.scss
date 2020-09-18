@@ -1,0 +1,27 @@
+/* NAVIGATION BAR */
+
+$navfont-size: 24px;
+
+nav {
+    background-color: darken($navcolor, 5);
+    position: relative;
+    width: 100%;
+    padding-top: 1%;
+    text-align: center;
+    ul {
+        text-align: center;
+    }
+    li {
+        display: inline-block;
+        width: 10%;
+    }
+    a {
+        padding: 10%;
+        display: block;
+        text-align: center;
+        font-size: $navfont-size;
+        &:hover{
+            background: lighten($navcolor, 5);
+          }
+      } 
+    }
