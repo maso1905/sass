@@ -61,7 +61,7 @@ function watchTask() {
  */
 browserSync.init({
   watch: true,
-  server: "pub"
+  server: "src"
 });
 
 // Exports to the public directory 'pub'
