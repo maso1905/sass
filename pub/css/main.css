@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font-weight: normal;
+  font-family: inherit;
+  color: inherit; }
+
+img {
+  display: block;
+  margin: auto; }
+
+ul,
+li,
+a {
+  list-style-type: none;
+  text-decoration: none; }
+
+h1 {
+  font-size: 46px; }
+
+h2 {
+  font-size: 36px; }
+
+h3 {
+  font-size: 20px; }
+
+h4 {
+  font-size: 18px; }
+
+h5 {
+  font-size: 16px; }
+
+h6 {
+  font-size: 14px; }
+
+h1, h2, h3, h4, h5, h6, a {
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif; }
+
+body {
+  background-color: #dfdfdb;
+  color: #4b4c4e;
+  font-family: 'Open Sans', sans-serif; }
+
+/* LAYOUT */
+/* MIXIN */
+.linesHeading, .container h2, .circle-section h2, .banner-section h2 {
+  text-align: center;
+  margin-top: 3.5%;
+  margin-bottom: 3.5%;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center; }
+
+.linesBeforeandAfter, .container h2:before,
+.container h2:after, .circle-section h2:before,
+.circle-section h2:after, .banner-section h2:before,
+.banner-section h2:after {
+  content: '';
+  border-top: 2px solid;
+  margin: 0 20px 0 0;
+  flex: 1 0 20px; }
+
+.linesAfter,
+.container h2:after,
+.circle-section h2:after,
+.banner-section h2:after {
+  margin: 0 0 0 20px; }
+
+.box, .container li img, .circle-section li img, .banner-section img {
+  box-shadow: 5px 10px 5px 0px rgba(0, 0, 0, 0.2);
+  border: 3px solid none; }
+
+.wrapper {
+  margin: 2% auto;
+  width: 94%; }
+
+.container li {
+  float: left;
+  margin-right: 1.5%;
+  margin-bottom: 1.5%;
+  width: 32.33333%; }
+  .container li:nth-child(3n) {
+    margin-right: 0; }
+  .container li img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 3px; }
+
+.container ul:after {
+  content: "";
+  display: block;
+  clear: both; }
+
+.circle-section li {
+  float: left;
+  margin-right: 1%;
+  margin-bottom: 1%;
+  width: 19.2%; }
+  .circle-section li:nth-child(5n) {
+    margin-right: 0; }
+  .circle-section li img {
+    max-width: 100%;
+    border-radius: 50%;
+    opacity: 0.9; }
+
+.circle-section ul:after {
+  content: "";
+  display: block;
+  clear: both; }
+
+.banner-section {
+  position: relative; }
+  .banner-section .banner-content {
+    position: absolute;
+    width: 100%;
+    top: 50%; }
+  .banner-section img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    opacity: 0.85; }
+  .banner-section span {
+    display: block;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #535353;
+    font-size: 46px;
+    margin-left: 5%; }
+  .banner-section span.sub-title {
+    font-weight: normal;
+    font-size: 36px; }
+
+/* NAVIGATION BAR */
+nav {
+  background-color: #b7c3bc;
+  position: relative;
+  width: 100%;
+  padding-top: 1%;
+  text-align: center; }
+  nav ul {
+    text-align: center; }
+  nav li {
+    display: inline-block;
+    width: 10%; }
+  nav a {
+    padding: 10%;
+    display: block;
+    text-align: center;
+    font-size: 24px; }
+    nav a:hover {
+      background: #d3dbd6; }
+
+/* MIXIN */
+.linesHeading, .container h2, .circle-section h2, .banner-section h2 {
+  text-align: center;
+  margin-top: 3.5%;
+  margin-bottom: 3.5%;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center; }
+
+.linesBeforeandAfter, .container h2:before,
+.container h2:after, .circle-section h2:before,
+.circle-section h2:after, .banner-section h2:before,
+.banner-section h2:after {
+  content: '';
+  border-top: 2px solid;
+  margin: 0 20px 0 0;
+  flex: 1 0 20px; }
+
+.linesAfter,
+.container h2:after,
+.circle-section h2:after,
+.banner-section h2:after {
+  margin: 0 0 0 20px; }
+
+/*# sourceMappingURL=main.css.map */

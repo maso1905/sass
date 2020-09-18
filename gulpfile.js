@@ -56,12 +56,12 @@ function watchTask() {
 
 
 /**
- * This will serve files from the 'src' directory
+ * This will serve files from the 'pub' directory
  * and will automatically watch for html/css/js/img changes
  */
 browserSync.init({
   watch: true,
-  server: "src"
+  server: "pub"
 });
 
 // Exports to the public directory 'pub'
