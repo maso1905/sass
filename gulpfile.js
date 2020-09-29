@@ -4,6 +4,7 @@ const { src, series, parallel, dest, watch } = require('gulp');
 const sass = require('gulp-sass'); 
 sass.compiler = require('node-sass');
 var sourcemaps = require('gulp-sourcemaps');
+const babel = require('gulp-babel');
 var browserSync = require('browser-sync').create();
 
 
@@ -35,7 +36,10 @@ function copyScss(){
 // Copy & concatenate all files with .js from 'src/js' directory to the 'pub' directory
 function copyJs(){
   return src(files.jsPath)
+    .pipe(sourcemaps.init())
+    .pipe(babel())
     .pipe(concat('main.js'))
+    .pipe(sourcemaps.write("."))
     .pipe(dest('pub/js'))
     .pipe(browserSync.stream());
 }
