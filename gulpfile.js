@@ -37,7 +37,9 @@ function copyScss(){
 function copyJs(){
   return src(files.jsPath)
     .pipe(sourcemaps.init())
-    .pipe(babel())
+    .pipe(babel({
+      presets: ['@babel/env']
+    }))
     .pipe(concat('main.js'))
     .pipe(sourcemaps.write("."))
     .pipe(dest('pub/js'))
